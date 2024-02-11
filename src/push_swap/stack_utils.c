@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 12:09:07 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/10 15:14:23 by mcruz-sa         ###   ########.fr       */
+/*   Updated: 2024/02/10 22:52:45 by jimenasando      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,4 +93,14 @@ t_stack	*find_smallest(t_stack *stack_head)
 		curr = curr->next;
 	}
 	return (min_node);
+}
+
+t_stack	*find_last(t_stack *stack_head)
+{
+	t_stack	*curr;
+
+	curr = stack_head;
+	while (curr->next != NULL)
+		curr = curr->next;
+	return (curr);
 }

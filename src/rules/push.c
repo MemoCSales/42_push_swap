@@ -3,44 +3,45 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 14:05:00 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/10 15:15:55 by mcruz-sa         ###   ########.fr       */
+/*   Updated: 2024/02/11 00:56:28 by jimenasando      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-t_stack	*pop(t_stack **stack)
-{
-	t_stack	*curr;
-	if (!stack)
-		return (NULL);
-	curr = *stack;
-	*stack = curr->next;
-	if (*stack != NULL)
-		(*stack)->prev = NULL;
-	return (curr);
-}
+// t_stack	*pop(t_stack **stack)
+// {
+// 	t_stack	*curr;
+// 	if (!stack)
+// 		return (NULL);
+// 	curr = *stack;
+// 	*stack = (*stack)->next;
+// 	if (*stack != NULL)
+// 		(*stack)->prev = NULL;
+// 	return (curr);
+// }
 
 void	push(t_stack **dst, t_stack **src)
 {
 	t_stack	*push_node;
 
-	if (!*src)
+	if (*src == NULL || src == NULL)
 		return ;
-	else
-		push_node = pop(src);
-	if (!*dst)
+	// push_node = pop(src);
+	push_node = *src;
+	*src = (*src)->next;
+	if (*dst == NULL)
 	{
 		*dst = push_node;
-		push_node->next = NULL;
+		(*dst)->next = NULL;
 	}
 	else
 	{
 		push_node->next = *dst;
-		push_node->next->prev = push_node;
+		// push_node->next->prev = push_node;
 		*dst = push_node;
 	}
 }

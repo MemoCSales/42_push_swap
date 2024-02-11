@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   indexing.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 19:33:28 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/10 17:17:03 by mcruz-sa         ###   ########.fr       */
+/*   Updated: 2024/02/10 22:47:51 by jimenasando      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ void	indexing(t_stack **a_head)
 	sorted_arr = sort_array(a_head);
 	while (curr)
 	{
-		j = 0;
+		j = 1;
 		temp = sorted_arr;
 		while (*temp)
 		{
 			if (curr->nbr == *temp)
 			{
-				curr->sorted_idx = j;
+				curr->index = j;
 				break ;
 			}
 			temp++;

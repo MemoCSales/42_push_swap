@@ -12,6 +12,7 @@ SRC = 	$(SRC_DIR)push_swap/main.c \
 		$(SRC_DIR)push_swap/stack_utils.c \
 		$(SRC_DIR)push_swap/deallocation.c \
 		$(SRC_DIR)push_swap/indexing.c \
+		$(SRC_DIR)push_swap/init_a_to_b.c \
 		$(SRC_DIR)rules/swap.c \
 		$(SRC_DIR)rules/sort_three.c \
 		$(SRC_DIR)rules/push.c \

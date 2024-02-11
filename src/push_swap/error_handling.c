@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error_handling.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 18:55:02 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/10 15:14:32 by mcruz-sa         ###   ########.fr       */
+/*   Updated: 2024/02/10 22:05:45 by jimenasando      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
