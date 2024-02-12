@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   node_init.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:04:49 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/12 18:16:41 by mcruz-sa         ###   ########.fr       */
+/*   Updated: 2024/02/13 00:06:58 by jimenasando      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,32 @@ void	set_target_node(t_stack **a_head, t_stack **b_head)
 	}
 }
 
+void	set_price(t_stack **a_head, t_stack **b_head)
+{
+	t_stack	*curr_a;
+	t_stack	*curr_b;
+	int		size_a;
+	int		size_b;
+	
+	size_a = stack_len(a_head);
+	size_b = stack_len(b_head);
+	curr_a = a_head;
+	curr_b = b_head;
+	while(curr_b)
+	{
+		curr_b->price_b = curr_b->pos;
+		if (curr_b->pos > size_a / 2)
+			curr_b->price_b = (size_b - curr_b->pos) * -1;
+		curr_b->price_a = curr_b->target_node->pos;
+		if (curr_b->target_node->pos > size_a / 2)
+			curr_b->price_a = (size_a - curr_b->target_node->pos) * -1;
+		curr_b = curr_b->next;
+	}
+}
 void	init_node(t_stack **a_head, t_stack **b_head)
 {
 	init_position(*a_head);
 	init_position(*b_head);
 	set_target_node(a_head, b_head);
+	set_price(a_head, b_head);
 }

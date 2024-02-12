@@ -6,7 +6,7 @@
 /*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 12:09:07 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/10 22:52:45 by jimenasando      ###   ########.fr       */
+/*   Updated: 2024/02/13 00:16:57 by jimenasando      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,4 +103,11 @@ t_stack	*find_last(t_stack *stack_head)
 	while (curr->next != NULL)
 		curr = curr->next;
 	return (curr);
+}
+
+t_stack		*node_before_last(t_stack *list)
+{
+	while (list && list->next && list->next->next != NULL)
+		list = list->next;
+	return (list);
 }
