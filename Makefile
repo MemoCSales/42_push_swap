@@ -6,23 +6,23 @@ OBJ_DIR = obj/
 CC 		= cc
 CFLAGS 	= -Wall -Wextra -Werror
 
-SRC = 	$(SRC_DIR)push_swap/main.c \
-		$(SRC_DIR)push_swap/stack_init.c \
+SRC = 	$(SRC_DIR)push_swap/deallocation.c \
 		$(SRC_DIR)push_swap/error_handling.c  \
-		$(SRC_DIR)push_swap/stack_utils.c \
-		$(SRC_DIR)push_swap/deallocation.c \
 		$(SRC_DIR)push_swap/indexing.c \
 		$(SRC_DIR)push_swap/init_a_to_b.c \
+		$(SRC_DIR)push_swap/main.c \
+		$(SRC_DIR)push_swap/moves.c \
 		$(SRC_DIR)push_swap/node_init.c \
-		$(SRC_DIR)rules/swap.c \
-		$(SRC_DIR)rules/sort_three.c \
+		$(SRC_DIR)push_swap/stack_init.c \
+		$(SRC_DIR)push_swap/stack_utils.c \
 		$(SRC_DIR)rules/push.c \
 		$(SRC_DIR)rules/rotate.c \
 		$(SRC_DIR)rules/rrotate.c \
+		$(SRC_DIR)rules/sort_three.c \
+		$(SRC_DIR)rules/swap.c \
 
 all: $(NAME)
 
-# OBJ = $(SRC:.c=.o)
 OBJ = $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRC))
 
 INCLUDE = -L ./libft -lft -I ./header
