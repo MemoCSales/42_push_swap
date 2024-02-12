@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_a_to_b.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
+/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 15:18:41 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/11 00:57:52 by jimenasando      ###   ########.fr       */
+/*   Updated: 2024/02/12 18:16:54 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,8 @@ void	sort_stacks(t_stack **stack_a, t_stack **stack_b)
 {
 	first_push(stack_a, stack_b);
 	sort_three(stack_a);
+	while(*stack_b)
+	{
+		init_node(stack_a, stack_b);
+	}
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
+/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 14:25:55 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/11 01:07:37 by jimenasando      ###   ########.fr       */
+/*   Updated: 2024/02/12 19:50:23 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,10 @@ t_stack				*pop(t_stack **stack);
 void				sort_three(t_stack **a_head);
 void				sort_stacks(t_stack **stack_a, t_stack **stack_b);
 t_stack				*node_before_last(t_stack *list);
+void				first_push(t_stack **a_head, t_stack **b_head);
+void				init_position(t_stack *node);
+void				set_target_node(t_stack **a_head, t_stack **b_head);
+void				init_node(t_stack **a_head, t_stack **b_head);
 
 // ERROR HANDLING
 int					check_error_syntax(char *str);

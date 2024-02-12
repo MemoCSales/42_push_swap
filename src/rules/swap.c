@@ -6,7 +6,7 @@
 /*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 11:55:08 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/07 19:26:20 by mcruz-sa         ###   ########.fr       */
+/*   Updated: 2024/02/12 12:59:06 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,17 @@ void	sa(t_stack **a_head, bool print)
 }
 
 // Function that swaps the first 2 nodes of stack b
-
+void	sb(t_stack **b_head, bool print)
+{
+	swap(b_head);
+	if(print)
+		write(1, "sb\n", 3);
+}
 // Function that swaps both stacks at the same time
+void	ss(t_stack **a_head, t_stack **b_head, bool print)
+{
+	swap(a_head);
+	swap(b_head);
+	if(print)
+		write(1, "ss\n", 3);
+}
