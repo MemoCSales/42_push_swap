@@ -6,7 +6,7 @@
 /*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 00:20:29 by jimenasando       #+#    #+#             */
-/*   Updated: 2024/02/13 19:15:26 by jimenasando      ###   ########.fr       */
+/*   Updated: 2024/02/13 20:03:44 by jimenasando      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ void	do_rotate_b(t_stack **b, int *cost_b)
 		if (*cost_b > 0)
 		{
 			rb(b, true);
+			printf("Nodo en b");
 			(*cost_b)--;
 		}
 		else if (*cost_b < 0)
@@ -82,8 +83,12 @@ void	do_rotate_b(t_stack **b, int *cost_b)
 
 void	do_move(t_stack **a, t_stack **b, int cost_a, int cost_b)
 {
+	printf("Cost a %d, cost b %d\n", cost_a, cost_b);
 	if (cost_a < 0 && cost_b < 0)
+	{
+		printf("do move");
 		do_rr_both(a, b, &cost_a, &cost_b);
+	}
 	else if (cost_a > 0 && cost_b > 0)
 		do_r_both(a, b, &cost_a, &cost_b);
 	do_rotate_a(a, &cost_a);

@@ -6,7 +6,7 @@
 /*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:04:49 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/13 19:16:18 by jimenasando      ###   ########.fr       */
+/*   Updated: 2024/02/13 20:09:39 by jimenasando      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,10 +71,16 @@ void	set_price(t_stack **a_head, t_stack **b_head)
 	{
 		curr_b->price_b = curr_b->pos;
 		if (curr_b->pos > size_a / 2)
+		{
 			curr_b->price_b = (size_b - curr_b->pos) * -1;
+			printf("Nodo -> %ld \t Precio b del nodo %d\n", curr_b->nbr, curr_b->price_b);
+		}
 		curr_b->price_a = curr_b->target_node->pos;
 		if (curr_b->target_node->pos > size_a / 2)
+		{
 			curr_b->price_a = (size_a - curr_b->target_node->pos) * -1;
+			printf("Nodo -> %ld \t Precio a del nodo %d\n", curr_b->nbr, curr_b->price_a);
+		}
 		curr_b = curr_b->next;
 	}
 }
