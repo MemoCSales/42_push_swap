@@ -6,7 +6,7 @@
 /*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 14:25:55 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/13 00:26:27 by jimenasando      ###   ########.fr       */
+/*   Updated: 2024/02/13 19:15:48 by jimenasando      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,12 @@ typedef struct s_stack
 	long			nbr;
 	int				index;
 	int				pos;
-	int				push_cost;
 	int				price_a;
 	int				price_b;
 	struct s_stack	*target_node;
 	struct s_stack	*next;
 	struct s_stack	*prev;
-}	t_stack;
+}					t_stack;
 
 // DEALLOCATION
 void				deallocate_stack(t_stack **a_head, t_stack **a_tail);
@@ -47,7 +46,7 @@ int					*sort_array(t_stack **a_head);
 void				indexing(t_stack **a_head);
 void				swap_int(int *i, int *j);
 void				bubble_sort(int *int_array, int size);
-bool				is_cyclic(t_stack *stack_head); //havent used yet
+bool				is_cyclic(t_stack *stack_head); // havent used yet
 
 // INIT_A_TO_B
 void				first_push(t_stack **a_head, t_stack **b_head);
@@ -55,7 +54,7 @@ void				do_cheapest(t_stack **stack_a, t_stack **stack_b);
 void				sort_stacks(t_stack **stack_a, t_stack **stack_b);
 int					nb_abs(int nb);
 
-//NODE INITIALIZATION
+// NODE INITIALIZATION
 void				init_position(t_stack *node);
 void				set_target_node(t_stack **a_head, t_stack **b_head);
 void				set_price(t_stack **a_head, t_stack **b_head);
@@ -72,10 +71,21 @@ void				stack_a_init(t_stack **a_head, t_stack **a_tail,
 void				insert_last(t_stack **a_tail, int value);
 int					stack_len(t_stack **stack);
 bool				sorted_stack(t_stack *stack);
+
+// STACK UTILS 2
 t_stack				*find_biggest(t_stack *stack_head);
 t_stack				*find_smallest(t_stack *stack_head);
 t_stack				*find_last(t_stack *stack_head);
 t_stack				*node_before_last(t_stack *list);
+
+// MOVES
+void			do_rr_both(t_stack **a, t_stack **b, int *cost_a,
+						int *cost_b);
+void			do_r_both(t_stack **a, t_stack **b, int *cost_a,
+						int *cost_b);
+void			do_rotate_a(t_stack **a, int *cost_a);
+void			do_rotate_b(t_stack **b, int *cost_b);
+void				do_move(t_stack **a, t_stack **b, int cost_a, int cost_b);
 
 // PUSH_SWAP RULES
 void				push(t_stack **dst, t_stack **src);

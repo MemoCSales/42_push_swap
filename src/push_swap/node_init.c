@@ -6,7 +6,7 @@
 /*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:04:49 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/13 00:06:58 by jimenasando      ###   ########.fr       */
+/*   Updated: 2024/02/13 19:16:18 by jimenasando      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	init_position(t_stack *node)
 {
 	int	i;
-	
+
 	i = 0;
 	if (!node)
 		return ;
@@ -33,9 +33,9 @@ void	set_target_node(t_stack **a_head, t_stack **b_head)
 	t_stack	*curr_b;
 	t_stack	*target_node;
 	int		best_node;
-	
+
 	curr_b = *b_head;
-	while(curr_b)
+	while (curr_b)
 	{
 		curr_a = *a_head;
 		best_node = INT_MAX;
@@ -62,12 +62,12 @@ void	set_price(t_stack **a_head, t_stack **b_head)
 	t_stack	*curr_b;
 	int		size_a;
 	int		size_b;
-	
+
 	size_a = stack_len(a_head);
 	size_b = stack_len(b_head);
-	curr_a = a_head;
-	curr_b = b_head;
-	while(curr_b)
+	curr_a = *a_head;
+	curr_b = *b_head;
+	while (curr_b)
 	{
 		curr_b->price_b = curr_b->pos;
 		if (curr_b->pos > size_a / 2)
@@ -78,6 +78,7 @@ void	set_price(t_stack **a_head, t_stack **b_head)
 		curr_b = curr_b->next;
 	}
 }
+
 void	init_node(t_stack **a_head, t_stack **b_head)
 {
 	init_position(*a_head);

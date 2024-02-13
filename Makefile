@@ -15,6 +15,7 @@ SRC = 	$(SRC_DIR)push_swap/deallocation.c \
 		$(SRC_DIR)push_swap/node_init.c \
 		$(SRC_DIR)push_swap/stack_init.c \
 		$(SRC_DIR)push_swap/stack_utils.c \
+		$(SRC_DIR)push_swap/stack_utils2.c \
 		$(SRC_DIR)rules/push.c \
 		$(SRC_DIR)rules/rotate.c \
 		$(SRC_DIR)rules/rrotate.c \

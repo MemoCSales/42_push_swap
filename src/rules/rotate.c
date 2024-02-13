@@ -6,7 +6,7 @@
 /*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 21:14:10 by jimenasando       #+#    #+#             */
-/*   Updated: 2024/02/10 21:36:04 by jimenasando      ###   ########.fr       */
+/*   Updated: 2024/02/13 18:50:38 by jimenasando      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	rotate(t_stack **stack_head)
 {
 	t_stack	*first_node;
 	t_stack	*last_node;
-	
+
 	last_node = find_last(*stack_head);
 	if (!(*stack_head) || !(*stack_head)->next)
 		return ;

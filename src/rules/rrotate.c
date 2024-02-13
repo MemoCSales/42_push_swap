@@ -6,7 +6,7 @@
 /*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 18:59:34 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/13 00:17:02 by jimenasando      ###   ########.fr       */
+/*   Updated: 2024/02/13 18:50:53 by jimenasando      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	rev_rotate(t_stack **stack_head)
 	last_node->next = *stack_head;
 	(*stack_head)->prev = last_node;
 	*stack_head = last_node;
-	// exit(1);
 }
 
 // Function that reverse rotate stack a
