@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   moves.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
+/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 00:20:29 by jimenasando       #+#    #+#             */
-/*   Updated: 2024/02/13 00:37:42 by jimenasando      ###   ########.fr       */
+/*   Updated: 2024/02/13 14:07:05 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,13 @@ static void	do_rr_both(t_stack **a_head, t_stack **b_head, int *cost_a, int *cos
 		(*cost_b)++;
 		rrr(a_head, b_head);
 	}
+	init_position(*a_head);
+	init_position(*b_head);
 }
-
+//This function rotate both stack until one of them is in position.
+//The cost is positive since both are located in the bottom half of their stacks
+//The cost is decreasing as the stacks are rotated when one reaches 0
+//the stacls has been rotated as bar as possible and the top position is correct
 static void do_r_both(t_stack **a_head, t_stack **b_head, int *cost_a, int *cost_b)
 {
 	while (*cost_a > 0 && *cost_b > 0)
@@ -35,6 +40,13 @@ static void do_r_both(t_stack **a_head, t_stack **b_head, int *cost_a, int *cost
 		(*cost_b)--;
 		rr(a_head, b_head);
 	}
+	init_position(*a_head);
+	init_position(*b_head);
+}
+
+static void	do_rotate_a(t_stack **a_head, int cost_a)
+{
+	
 }
 
 void	do_move(t_stack **a_head, t_stack **b_head, int cost_a, int cost_b)
