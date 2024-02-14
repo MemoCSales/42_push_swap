@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_a_to_b.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 15:18:41 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/14 16:38:43 by mcruz-sa         ###   ########.fr       */
+/*   Updated: 2024/02/14 22:00:56 by jimenasando      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,14 @@ void	do_cheapest(t_stack **stack_a, t_stack **stack_b)
 	cheapest = INT_MAX;
 	while (curr)
 	{
-		// printf("Price a = %d // Price b = %d\n", curr->price_a, curr->price_b);
-		if (nb_abs(curr->price_a) + nb_abs(curr->price_b) < nb_abs(cheapest))
+		printf("Cost a = %d // Cost b = %d // Cheapest = %d\n", curr->cost_a, curr->cost_b, cheapest);
+		if (nb_abs(curr->cost_a) + nb_abs(curr->cost_b) < nb_abs(cheapest))
 		{
-			cheapest = nb_abs(curr->price_b) + nb_abs(curr->price_b);
-			// printf("current node %ld cheapest: %d\n", curr->nbr, cheapest);
-			cost_a = curr->price_a;
-			cost_b = curr->price_b;
+			cheapest = nb_abs(curr->cost_b) + nb_abs(curr->cost_a);
+			printf("current node %ld cheapest: %d\n", curr->nbr, cheapest);
+			cost_a = curr->cost_a;
+			cost_b = curr->cost_b;
+			printf("Cost_a %d \t Cost_b %d\n", cost_a, cost_b);
 		}
 		curr = curr->next;
 	}
@@ -148,7 +149,7 @@ void	sort_stacks(t_stack **stack_a, t_stack **stack_b)
 		// printf("Price in a \t:");
 		// while (curr2 != NULL)
 		// {
-		// 	printf("{%d}", curr2->price_a);
+		// 	printf("{%d}", curr2->cost_a);
 		// 	curr2 = curr2->next;
 		// }
 		// printf("\n");
@@ -156,7 +157,7 @@ void	sort_stacks(t_stack **stack_a, t_stack **stack_b)
 		// printf("Price in b \t:");
 		// while (curr2 != NULL)
 		// {
-		// 	printf("{%d}", curr2->price_b);
+		// 	printf("{%d}", curr2->cost_b);
 		// 	curr2 = curr2->next;
 		// }
 		// printf("\n");

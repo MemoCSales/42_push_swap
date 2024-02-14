@@ -6,7 +6,7 @@
 /*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 14:25:55 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/13 19:15:48 by jimenasando      ###   ########.fr       */
+/*   Updated: 2024/02/14 21:25:35 by jimenasando      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ typedef struct s_stack
 	long			nbr;
 	int				index;
 	int				pos;
-	int				price_a;
-	int				price_b;
+	int				cost_a;
+	int				cost_b;
 	struct s_stack	*target_node;
 	struct s_stack	*next;
 	struct s_stack	*prev;
@@ -57,7 +57,7 @@ int					nb_abs(int nb);
 // NODE INITIALIZATION
 void				init_position(t_stack *node);
 void				set_target_node(t_stack **a_head, t_stack **b_head);
-void				set_price(t_stack **a_head, t_stack **b_head);
+void				set_cost(t_stack **a_head, t_stack **b_head);
 void				init_node(t_stack **a_head, t_stack **b_head);
 
 // STACK_INIT

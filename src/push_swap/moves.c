@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   moves.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 00:20:29 by jimenasando       #+#    #+#             */
-/*   Updated: 2024/02/14 15:52:44 by mcruz-sa         ###   ########.fr       */
+/*   Updated: 2024/02/14 21:52:54 by jimenasando      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ void	do_rr_both(t_stack **a, t_stack **b, int *cost_a, int *cost_b)
 		(*cost_b)++;
 		rrr(a, b);
 	}
-	init_position(*a);
-	init_position(*b);
+	// init_position(*a);
+	// init_position(*b);
 }
 
 // This function rotate both stack until one of them is in position.
@@ -42,8 +42,8 @@ void	do_r_both(t_stack **a, t_stack **b, int *cost_a, int *cost_b)
 		(*cost_b)--;
 		rr(a, b);
 	}
-	init_position(*a);
-	init_position(*b);
+	// init_position(*a);
+	// init_position(*b);
 }
 
 void	do_rotate_a(t_stack **a, int *cost_a)
@@ -75,7 +75,7 @@ void	do_rotate_b(t_stack **b, int *cost_b)
 		}
 		else if (*cost_b < 0)
 		{
-			rra(b, true);
+			rrb(b, true);
 			(*cost_b)++;
 		}
 	}
@@ -85,10 +85,7 @@ void	do_move(t_stack **a, t_stack **b, int cost_a, int cost_b)
 {
 	// printf("Cost a %d, cost b %d\n", cost_a, cost_b);
 	if (cost_a < 0 && cost_b < 0)
-	{
-		// printf("do move");
 		do_rr_both(a, b, &cost_a, &cost_b);
-	}
 	else if (cost_a > 0 && cost_b > 0)
 		do_r_both(a, b, &cost_a, &cost_b);
 	do_rotate_a(a, &cost_a);

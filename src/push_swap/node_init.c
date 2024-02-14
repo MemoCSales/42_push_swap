@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   node_init.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:04:49 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/14 16:42:42 by mcruz-sa         ###   ########.fr       */
+/*   Updated: 2024/02/14 21:53:51 by jimenasando      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	set_target_node(t_stack **a_head, t_stack **b_head)
 	}
 }
 
-void	set_price(t_stack **a_head, t_stack **b_head)
+void	set_cost(t_stack **a_head, t_stack **b_head)
 {
 	t_stack	*curr_a;
 	t_stack	*curr_b;
@@ -76,16 +76,16 @@ void	set_price(t_stack **a_head, t_stack **b_head)
 	curr_b = *b_head;
 	while (curr_b)
 	{
-		curr_b->price_b = curr_b->pos;
-		if (curr_b->pos > size_a / 2)
+		curr_b->cost_b = curr_b->pos;
+		if (curr_b->pos > size_b / 2)
 		{
-			curr_b->price_b = (size_b - curr_b->pos) * -1;
+			curr_b->cost_b = (size_b - curr_b->pos) * -1;
 			// printf("Nodo -> %ld \t Precio b del nodo %d\n", curr_b->nbr, curr_b->price_b);
 		}
-		curr_b->price_a = curr_b->target_node->pos;
+		curr_b->cost_a = curr_b->target_node->pos;
 		if (curr_b->target_node->pos > size_a / 2)
 		{
-			curr_b->price_a = (size_a - curr_b->target_node->pos) * -1;
+			curr_b->cost_a = (size_a - curr_b->target_node->pos) * -1;
 			// printf("Nodo -> %ld \t Precio a del nodo %d\n", curr_b->nbr, curr_b->price_a);
 		}
 		curr_b = curr_b->next;
@@ -97,5 +97,5 @@ void	init_node(t_stack **a_head, t_stack **b_head)
 	init_position(*a_head);
 	init_position(*b_head);
 	set_target_node(a_head, b_head);
-	set_price(a_head, b_head);
+	set_cost(a_head, b_head);
 }
