@@ -6,7 +6,7 @@
 /*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 19:33:28 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/12 18:11:54 by mcruz-sa         ###   ########.fr       */
+/*   Updated: 2024/02/14 12:23:32 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,16 @@ void	indexing(t_stack **a_head)
 
 	curr = *a_head;
 	sorted_arr = sort_array(a_head);
-	while (curr)
+	while (curr!= NULL)
 	{
-		j = 1;
 		temp = sorted_arr;
+		j = 1;
 		while (*temp)
 		{
 			if (curr->nbr == *temp)
 			{
 				curr->index = j;
+				// printf("Nodo [%ld] \t index {%d}\n", curr->nbr, curr->index);
 				break ;
 			}
 			temp++;

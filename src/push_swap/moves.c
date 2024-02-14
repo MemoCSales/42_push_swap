@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   moves.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
+/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 00:20:29 by jimenasando       #+#    #+#             */
-/*   Updated: 2024/02/13 20:03:44 by jimenasando      ###   ########.fr       */
+/*   Updated: 2024/02/14 15:52:44 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	do_rotate_b(t_stack **b, int *cost_b)
 		if (*cost_b > 0)
 		{
 			rb(b, true);
-			printf("Nodo en b");
+			// printf("Nodo en b");
 			(*cost_b)--;
 		}
 		else if (*cost_b < 0)
@@ -83,10 +83,10 @@ void	do_rotate_b(t_stack **b, int *cost_b)
 
 void	do_move(t_stack **a, t_stack **b, int cost_a, int cost_b)
 {
-	printf("Cost a %d, cost b %d\n", cost_a, cost_b);
+	// printf("Cost a %d, cost b %d\n", cost_a, cost_b);
 	if (cost_a < 0 && cost_b < 0)
 	{
-		printf("do move");
+		// printf("do move");
 		do_rr_both(a, b, &cost_a, &cost_b);
 	}
 	else if (cost_a > 0 && cost_b > 0)

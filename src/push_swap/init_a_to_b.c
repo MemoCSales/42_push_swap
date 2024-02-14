@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_a_to_b.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
+/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 15:18:41 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/13 20:05:10 by jimenasando      ###   ########.fr       */
+/*   Updated: 2024/02/14 16:38:43 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,11 @@ void	first_push(t_stack **a_head, t_stack **b_head)
 	len_a = stack_len(a_head);
 	i = 0;
 	count = 0;
-	while (i < len_a && count < len_a / 2)
+	while (len_a > 6 && i < len_a && count < len_a / 2)
 	{
 		if ((*a_head)->index <= len_a / 2)
 		{
+			// printf("Node [%ld] -> to stack b\n", (*a_head)->nbr);
 			pb(b_head, a_head, true);
 			count++;
 		}
@@ -61,9 +62,11 @@ void	do_cheapest(t_stack **stack_a, t_stack **stack_b)
 	cheapest = INT_MAX;
 	while (curr)
 	{
+		// printf("Price a = %d // Price b = %d\n", curr->price_a, curr->price_b);
 		if (nb_abs(curr->price_a) + nb_abs(curr->price_b) < nb_abs(cheapest))
 		{
 			cheapest = nb_abs(curr->price_b) + nb_abs(curr->price_b);
+			// printf("current node %ld cheapest: %d\n", curr->nbr, cheapest);
 			cost_a = curr->price_a;
 			cost_b = curr->price_b;
 		}
@@ -79,13 +82,14 @@ void	final_rotation(t_stack **stack_a)
 
 	size = stack_len(stack_a);
 	lowest_node = find_smallest(*stack_a);
+	init_position(*stack_a);
 	if (lowest_node->pos > size / 2)
 	{
 		while (lowest_node->pos != 0)
 		{
 			rra(stack_a, true);
 			init_position(*stack_a);
-			find_smallest(*stack_a);
+			lowest_node = find_smallest(*stack_a);
 		}
 	}
 	else
@@ -94,20 +98,73 @@ void	final_rotation(t_stack **stack_a)
 		{
 			ra(stack_a, true);
 			init_position(*stack_a);
-			find_smallest(*stack_a);
+			lowest_node = find_smallest(*stack_a);
 		}
 	}
 }
 
 void	sort_stacks(t_stack **stack_a, t_stack **stack_b)
 {
+	indexing(stack_a);
 	first_push(stack_a, stack_b);
 	sort_three(stack_a);
+	// t_stack	*curr = *stack_a;
+	// printf("Stack a \t:");
+	// while (curr != NULL)
+	// {
+	// 	printf("%ld->", curr->nbr);
+	// 	curr = curr->next;
+	// }
+	// printf("\n");
+	// curr = *stack_a;
+	// printf("Index \t\t:");
+	// while (curr != NULL)
+	// {
+	// 	printf("{%d}", curr->index);
+	// 	curr = curr->next;
+	// }
+	// printf("\n");
+	// printf("Stack b \t:");
+	// t_stack	*curr2 = *stack_b;
+	// while (curr2 != NULL)
+	// {
+	// 	printf("%ld->", curr2->nbr);
+	// 	curr2 = curr2->next;
+	// }
+	// printf("\n");
+	// curr2 = *stack_b;
+	// printf("Index \t\t:");
+	// while (curr2 != NULL)
+	// {
+	// 	printf("{%d}", curr2->index);
+	// 	curr2 = curr2->next;
+	// }
+	// printf("\n");
+	
 	while (*stack_b)
 	{
 		init_node(stack_a, stack_b);
+		// t_stack *curr2 = *stack_b;
+		// printf("Price in a \t:");
+		// while (curr2 != NULL)
+		// {
+		// 	printf("{%d}", curr2->price_a);
+		// 	curr2 = curr2->next;
+		// }
+		// printf("\n");
+		// curr2 = *stack_b;
+		// printf("Price in b \t:");
+		// while (curr2 != NULL)
+		// {
+		// 	printf("{%d}", curr2->price_b);
+		// 	curr2 = curr2->next;
+		// }
+		// printf("\n");
 		do_cheapest(stack_a, stack_b);
 	}
 	if (is_cyclic(*stack_a))
+	{
+		// printf("CYCLIC\n");
 		final_rotation(stack_a);
+	}
 }

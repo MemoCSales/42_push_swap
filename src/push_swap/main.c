@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
+/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 11:50:18 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/13 19:52:13 by jimenasando      ###   ########.fr       */
+/*   Updated: 2024/02/14 16:12:55 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(int argc, char **argv)
 		else
 			sort_stacks(&a_head, &b_head);
 	}
-	// curr = a_head;
+	// t_stack *curr = a_head;
 	// while (curr != NULL)
 	// {
 	// 	printf("%ld->", curr->nbr);
