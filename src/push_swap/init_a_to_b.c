@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_a_to_b.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
+/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 15:18:41 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/14 22:00:56 by jimenasando      ###   ########.fr       */
+/*   Updated: 2024/02/15 15:29:23 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,14 +62,14 @@ void	do_cheapest(t_stack **stack_a, t_stack **stack_b)
 	cheapest = INT_MAX;
 	while (curr)
 	{
-		printf("Cost a = %d // Cost b = %d // Cheapest = %d\n", curr->cost_a, curr->cost_b, cheapest);
+		// printf("Cost a = %d // Cost b = %d // Cheapest = %d\n", curr->cost_a, curr->cost_b, cheapest);
 		if (nb_abs(curr->cost_a) + nb_abs(curr->cost_b) < nb_abs(cheapest))
 		{
 			cheapest = nb_abs(curr->cost_b) + nb_abs(curr->cost_a);
-			printf("current node %ld cheapest: %d\n", curr->nbr, cheapest);
+			// printf("current node %ld cheapest: %d\n", curr->nbr, cheapest);
 			cost_a = curr->cost_a;
 			cost_b = curr->cost_b;
-			printf("Cost_a %d \t Cost_b %d\n", cost_a, cost_b);
+			// printf("Cost_a %d \t Cost_b %d\n", cost_a, cost_b);
 		}
 		curr = curr->next;
 	}
@@ -163,9 +163,8 @@ void	sort_stacks(t_stack **stack_a, t_stack **stack_b)
 		// printf("\n");
 		do_cheapest(stack_a, stack_b);
 	}
-	if (is_cyclic(*stack_a))
+	if (!sorted_stack(*stack_a))
 	{
-		// printf("CYCLIC\n");
 		final_rotation(stack_a);
 	}
 }

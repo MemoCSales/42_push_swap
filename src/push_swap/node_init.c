@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   node_init.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
+/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:04:49 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/14 21:53:51 by jimenasando      ###   ########.fr       */
+/*   Updated: 2024/02/15 15:34:28 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,14 +65,12 @@ void	set_target_node(t_stack **a_head, t_stack **b_head)
 
 void	set_cost(t_stack **a_head, t_stack **b_head)
 {
-	t_stack	*curr_a;
 	t_stack	*curr_b;
 	int		size_a;
 	int		size_b;
 
 	size_a = stack_len(a_head);
 	size_b = stack_len(b_head);
-	curr_a = *a_head;
 	curr_b = *b_head;
 	while (curr_b)
 	{
@@ -94,6 +92,38 @@ void	set_cost(t_stack **a_head, t_stack **b_head)
 
 void	init_node(t_stack **a_head, t_stack **b_head)
 {
+	// t_stack	*curr = *a_head;
+	// printf("Stack a \t:");
+	// while (curr != NULL)
+	// {
+	// 	printf("%ld->", curr->nbr);
+	// 	curr = curr->next;
+	// }
+	// printf("\n");
+	// curr = *a_head;
+	// printf("Index \t\t:");
+	// while (curr != NULL)
+	// {
+	// 	printf("{%d}", curr->index);
+	// 	curr = curr->next;
+	// }
+	// printf("\n");
+	// printf("Stack b \t:");
+	// t_stack	*curr2 = *b_head;
+	// while (curr2 != NULL)
+	// {
+	// 	printf("%ld->", curr2->nbr);
+	// 	curr2 = curr2->next;
+	// }
+	// printf("\n");
+	// curr2 = *b_head;
+	// printf("Index \t\t:");
+	// while (curr2 != NULL)
+	// {
+	// 	printf("{%d}", curr2->index);
+	// 	curr2 = curr2->next;
+	// }
+	// printf("\n");
 	init_position(*a_head);
 	init_position(*b_head);
 	set_target_node(a_head, b_head);

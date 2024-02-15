@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
+/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/10 21:14:10 by jimenasando       #+#    #+#             */
-/*   Updated: 2024/02/13 18:50:38 by jimenasando      ###   ########.fr       */
+/*   Created: 2024/02/10 21:14:10 by mcruz-sa	       #+#    #+#             */
+/*   Updated: 2024/02/15 11:19:27 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

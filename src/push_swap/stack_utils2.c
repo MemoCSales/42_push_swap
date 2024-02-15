@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
+/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/13 19:03:25 by jimenasando       #+#    #+#             */
-/*   Updated: 2024/02/13 19:03:52 by jimenasando      ###   ########.fr       */
+/*   Created: 2024/02/13 19:03:25 by mcruz-sa	       #+#    #+#             */
+/*   Updated: 2024/02/15 11:18:56 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

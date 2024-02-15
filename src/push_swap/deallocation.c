@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   deallocation.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
+/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 19:35:09 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/10 22:08:12 by jimenasando      ###   ########.fr       */
+/*   Updated: 2024/02/15 11:17:45 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

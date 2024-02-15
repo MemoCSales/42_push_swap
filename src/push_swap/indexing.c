@@ -6,7 +6,7 @@
 /*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 19:33:28 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/14 12:23:32 by mcruz-sa         ###   ########.fr       */
+/*   Updated: 2024/02/15 15:40:39 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,14 @@ void	indexing(t_stack **a_head)
 
 	curr = *a_head;
 	sorted_arr = sort_array(a_head);
+
 	while (curr!= NULL)
 	{
 		temp = sorted_arr;
 		j = 1;
-		while (*temp)
+		while (j <= stack_len(a_head))
 		{
+			// printf("current node {%ld}\n", curr->nbr);
 			if (curr->nbr == *temp)
 			{
 				curr->index = j;
@@ -57,10 +59,12 @@ int	*sort_array(t_stack **a_head)
 	while (curr)
 	{
 		*tmp = curr->nbr;
+		// printf("tmp value %d\n", *tmp);
 		tmp++;
 		curr = curr->next;
 	}
 	bubble_sort(int_arr, size);
+
 	return (int_arr);
 }
 
@@ -79,6 +83,8 @@ void	bubble_sort(int *int_array, int size)
 	int	j;
 
 	i = 0;
+	if (int_array == NULL || size <= 0)
+		return ;
 	while (i < size - 1)
 	{
 		j = 0;

@@ -6,7 +6,7 @@
 /*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 11:50:18 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/14 16:12:55 by mcruz-sa         ###   ########.fr       */
+/*   Updated: 2024/02/15 15:40:45 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	main(int argc, char **argv)
 	// }
 	// printf("\n");
 	// printf("Stack b:");
-	// curr2 = b_head;
+	// t_stack	*curr2 = b_head;
 	// while (curr2 != NULL)
 	// {
 	// 	printf("%ld->", curr2->nbr);
@@ -64,13 +64,12 @@ int	main(int argc, char **argv)
 	// }
 	// printf("\n");
 
-	// curr = a_head;
-	// indexing(&curr);
-	// curr = a_head;
-	// while (curr != NULL)
+	// t_stack	*curr4 = a_head;
+	// indexing(&curr4);
+	// while (curr4 != NULL)
 	// {
-	// 	printf("%ld\t", curr->nbr);
-	// 	curr = curr->next;
+	// 	printf("[%d]\t", curr4->index);
+	// 	curr4 = curr4->next;
 	// }
 	// printf("\n");
 	// curr = a_head;

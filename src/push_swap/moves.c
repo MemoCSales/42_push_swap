@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   moves.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jimenasandoval <jimenasandoval@student.    +#+  +:+       +#+        */
+/*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/13 00:20:29 by jimenasando       #+#    #+#             */
-/*   Updated: 2024/02/14 21:52:54 by jimenasando      ###   ########.fr       */
+/*   Created: 2024/02/13 00:20:29 by mcruz-sa	       #+#    #+#             */
+/*   Updated: 2024/02/15 11:18:30 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
