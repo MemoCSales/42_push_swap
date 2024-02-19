@@ -46,15 +46,15 @@ Sorting values is simple. To sort them the fastest way possible is less simple
  - exit
  - ft_printf or equivalent
 
-:white_check_mark: ## Results ## :white_check_mark:
+## Results ##
 - According with [gemartin99 Tester](https://github.com/gemartin99/Push-Swap-Tester) (thank you for this amazing tester!)
 ### Multiple size <= 100 ###
 MOVES:
-- Min: 530 
-- Average: 595
-- Max: 671
+- Min: 530 :white_check_mark:
+- Average: 595 :white_check_mark:
+- Max: 671 :white_check_mark:
 ### Multiple size <= 500 ###
 MOVES:
-- Min: 4374
-- Average: 4785
-- Max: 5144
+- Min: 4374 :white_check_mark:
+- Average: 4785 :white_check_mark:
+- Max: 5144 :white_check_mark:
