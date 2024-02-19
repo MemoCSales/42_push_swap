@@ -6,23 +6,11 @@
 /*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 14:05:00 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/15 11:19:23 by mcruz-sa         ###   ########.fr       */
+/*   Updated: 2024/02/19 13:00:17 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
-
-// t_stack	*pop(t_stack **stack)
-// {
-// 	t_stack	*curr;
-// 	if (!stack)
-// 		return (NULL);
-// 	curr = *stack;
-// 	*stack = (*stack)->next;
-// 	if (*stack != NULL)
-// 		(*stack)->prev = NULL;
-// 	return (curr);
-// }
 
 void	push(t_stack **dst, t_stack **src)
 {
@@ -30,7 +18,6 @@ void	push(t_stack **dst, t_stack **src)
 
 	if (*src == NULL || src == NULL)
 		return ;
-	// push_node = pop(src);
 	push_node = *src;
 	*src = (*src)->next;
 	if (*dst == NULL)
@@ -41,7 +28,6 @@ void	push(t_stack **dst, t_stack **src)
 	else
 	{
 		push_node->next = *dst;
-		// push_node->next->prev = push_node;
 		*dst = push_node;
 	}
 }

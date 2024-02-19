@@ -6,7 +6,7 @@
 /*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 14:25:55 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/15 11:19:47 by mcruz-sa         ###   ########.fr       */
+/*   Updated: 2024/02/19 12:58:25 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int					*sort_array(t_stack **a_head);
 void				indexing(t_stack **a_head);
 void				swap_int(int *i, int *j);
 void				bubble_sort(int *int_array, int size);
-bool				is_cyclic(t_stack *stack_head); // havent used yet
+bool				is_cyclic(t_stack *stack_head);
 
 // INIT_A_TO_B
 void				first_push(t_stack **a_head, t_stack **b_head);
@@ -79,19 +79,18 @@ t_stack				*find_last(t_stack *stack_head);
 t_stack				*node_before_last(t_stack *list);
 
 // MOVES
-void			do_rr_both(t_stack **a, t_stack **b, int *cost_a,
+void				do_rr_both(t_stack **a, t_stack **b, int *cost_a,
 						int *cost_b);
-void			do_r_both(t_stack **a, t_stack **b, int *cost_a,
+void				do_r_both(t_stack **a, t_stack **b, int *cost_a,
 						int *cost_b);
-void			do_rotate_a(t_stack **a, int *cost_a);
-void			do_rotate_b(t_stack **b, int *cost_b);
+void				do_rotate_a(t_stack **a, int *cost_a);
+void				do_rotate_b(t_stack **b, int *cost_b);
 void				do_move(t_stack **a, t_stack **b, int cost_a, int cost_b);
 
 // PUSH_SWAP RULES
 void				push(t_stack **dst, t_stack **src);
 void				pa(t_stack **a_head, t_stack **b_head, bool print);
 void				pb(t_stack **b_head, t_stack **a_head, bool print);
-t_stack				*pop(t_stack **stack);
 
 void				rotate(t_stack **stack_head);
 void				ra(t_stack **a_head, bool print);

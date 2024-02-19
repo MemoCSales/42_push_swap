@@ -6,7 +6,7 @@
 /*   By: mcruz-sa <mcruz-sa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 11:50:18 by mcruz-sa          #+#    #+#             */
-/*   Updated: 2024/02/15 15:40:45 by mcruz-sa         ###   ########.fr       */
+/*   Updated: 2024/02/19 12:59:12 by mcruz-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,6 @@ int	main(int argc, char **argv)
 	t_stack	*a_tail;
 	t_stack	*b_head;
 	t_stack	*b_tail;
-	// t_stack	*curr;
-	// t_stack	*curr2;
-
-	// (void)curr;
 
 	a_head = NULL;
 	a_tail = NULL;
@@ -41,57 +37,6 @@ int	main(int argc, char **argv)
 		else
 			sort_stacks(&a_head, &b_head);
 	}
-	// t_stack *curr = a_head;
-	// while (curr != NULL)
-	// {
-	// 	printf("%ld->", curr->nbr);
-	// 	curr = curr->next;
-	// }
-	// printf("\n");
-	// printf("Stack b:");
-	// t_stack	*curr2 = b_head;
-	// while (curr2 != NULL)
-	// {
-	// 	printf("%ld->", curr2->nbr);
-	// 	curr2 = curr2->next;
-	// }
-	// printf("\n");
-	// t_stack	*curr3 = b_head;
-	// while (curr3 != NULL)
-	// {
-	// 	printf("<%d>", curr3->index);
-	// 	curr3 = curr3->next;
-	// }
-	// printf("\n");
-
-	// t_stack	*curr4 = a_head;
-	// indexing(&curr4);
-	// while (curr4 != NULL)
-	// {
-	// 	printf("[%d]\t", curr4->index);
-	// 	curr4 = curr4->next;
-	// }
-	// printf("\n");
-	// curr = a_head;
-	// while (curr != NULL)
-	// {
-	// 	printf("{%d}\t", curr->index);
-	// 	curr = curr->next;
-	// }
-	// printf("\n");
-	// int	*sorted_arr = sort_array(&a_head);
-	// int	i;
-	// int	len;
-	
-	// len = stack_len(&a_head);
-	// i = 0;
-	// while (i < len)
-	// {
-	// 	printf("[%d] ", sorted_arr[i]);
-	// 	i++;
-	// }
-	// printf("\n");
-	// free(sorted_arr);
 	deallocate_stack(&a_head, &a_tail);
 	return (0);
 }
