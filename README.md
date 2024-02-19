@@ -46,7 +46,7 @@ Sorting values is simple. To sort them the fastest way possible is less simple
  - exit
  - ft_printf or equivalent
 
-## Results ##
+:white_check_mark: ## Results ## :white_check_mark:
 - According with [gemartin99 Tester](https://github.com/gemartin99/Push-Swap-Tester) (thank you for this amazing tester!)
 ### Multiple size <= 100 ###
 MOVES:
