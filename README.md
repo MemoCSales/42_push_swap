@@ -50,9 +50,9 @@ Sorting values is simple. To sort them the fastest way possible is less simple
 - According with [gemartin99 Tester](https://github.com/gemartin99/Push-Swap-Tester) (thank you for this amazing tester!)
 ### Multiple size <= 100 ###
 MOVES:
-- Min: 530 :white_check_mark:
-- Average: 595 :white_check_mark:
-- Max: 671 :white_check_mark:
+- Min: 530  :white_check_mark:
+- Average: 595  :white_check_mark:
+- Max: 671  :white_check_mark:
 ### Multiple size <= 500 ###
 MOVES:
 - Min: 4374 :white_check_mark:
