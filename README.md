@@ -37,3 +37,18 @@ Sorting values is simple. To sort them the fastest way possible is less simple
 - fclean: This rule goes a step further than clean and removes all generated files, including the final executable. It essentially leaves the project in a state as if it was just checked out from version control and nothing has been built yet.
 
 - re: This rule is a shorthand for doing a clean build. It first performs fclean to remove all generated files and then runs the all rule to rebuild the project from scratch. It's useful when you want to ensure a complete rebuild of your project.
+
+### Allowed Functions ###
+ - read
+ - write
+ - malloc
+ - free
+ - exit
+ - ft_printf or equivalent
+
+## Results ##
+- According with [gemartin99 Tester](https://github.com/gemartin99/Push-Swap-Tester) (thank you for this amazing tester!)
+### Multiple size <= 100 ###
+- Min: 530 
+- Average: 595
+- Max: 671
