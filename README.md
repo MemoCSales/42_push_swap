@@ -4,6 +4,14 @@
 Sorting values is simple. To sort them the fastest way possible is less simple
 </h2> 
 
+<p align="center">
+  <a href="#about">About</a> &#xa0; | &#xa0;
+  <a href="#requirements">Requirements</a> &#xa0; | &#xa0;
+  <a href="#Results">Results</a> &#xa0; | &#xa0;
+</p>
+
+<br>
+
 ## About ##
 
 - Push_swap is an algorithm project at school 42.
