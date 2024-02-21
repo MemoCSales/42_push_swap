@@ -55,7 +55,10 @@ Sorting values is simple. To sort them the fastest way possible is less simple
  - ft_printf or equivalent
 
 ## Results ##
+### Tester ###
 - According with [gemartin99 Tester](https://github.com/gemartin99/Push-Swap-Tester) (thank you for this amazing tester!)
+### Visualizer ###
+- Visual representation thanks to Niimphu [link] (https://github.com/Niimphu/push_swap_visualiser)
 ### Multiple size <= 100 ###
 MOVES:
 - Min: 530      :white_check_mark:
